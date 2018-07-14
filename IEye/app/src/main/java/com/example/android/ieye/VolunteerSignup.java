@@ -183,7 +183,7 @@ public class VolunteerSignup extends AppCompatActivity {
     }
 
     public void btnLogin_click(View v){
-        Intent i=new Intent(VolunteerSignup.this,Stud_profile.class);
+        Intent i=new Intent(VolunteerSignup.this,VolunteerLogin.class);
         startActivity(i);
     }
 
