@@ -27,7 +27,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
     private EditText txtEmail;
     private EditText txtPassword;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
         txtEmail=(EditText) findViewById(R.id.txtEmailRegister);
         txtPassword=(EditText) findViewById(R.id.txtPasswordRegister);
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
 
-        mGoogleSignInClient=GoogleSignIn.getClient(MainActivity.this,gso);
+        mGoogleSignInClient=GoogleSignIn.getClient(Main2Activity.this,gso);
         signInButton=(SignInButton)findViewById(R.id.googleSignInButton);
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,14 +97,14 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            Intent i=new Intent(MainActivity.this,Stud_profile.class);
+                            Intent i=new Intent(Main2Activity.this,Volunteer_profile.class);
                             startActivity(i);
                             finish();
-                            Toast.makeText(MainActivity.this,"Welcome..",Toast.LENGTH_LONG).show();
+                            Toast.makeText(Main2Activity.this,"Welcome..",Toast.LENGTH_LONG).show();
 
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(MainActivity.this,"Error..",Toast.LENGTH_LONG).show();
+                            Toast.makeText(Main2Activity.this,"Error..",Toast.LENGTH_LONG).show();
                         }
 
                         // ...
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         final String email=txtEmail.getText().toString();
         final String password=txtPassword.getText().toString();
 
-        final ProgressDialog progressDialog = ProgressDialog.show(MainActivity.this,"Please wait...","Processing" ,true);
+        final ProgressDialog progressDialog = ProgressDialog.show(Main2Activity.this,"Please wait...","Processing" ,true);
         (firebaseAuth.createUserWithEmailAndPassword(txtEmail.getText().toString(),txtPassword.getText().toString()))
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                                     "  ","  ","  ","  "
                                     ,"  ","  ","  ","  ","  ","  ","  ","  ");
 
-                            rootReference.child("Student").child(firebaseUser.getUid()).setValue(user)
+                            rootReference.child("Volunteer").child(firebaseUser.getUid()).setValue(user)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
@@ -154,13 +154,13 @@ public class MainActivity extends AppCompatActivity {
 
                                             if(task.isSuccessful())
                                             {
-                                                SendMail sm = new SendMail(MainActivity.this, email, subject, message);
+                                                SendMail sm = new SendMail(Main2Activity.this, email, subject, message);
                                                 sm.execute();
 
                                                 //  Toast.makeText(MainActivity.this,"Welcome " +email,Toast.LENGTH_LONG).show();
-                                                Toast.makeText(MainActivity.this,"Welcome "+ email +"\nA mail has been sent with your login " +
+                                                Toast.makeText(Main2Activity.this,"Welcome "+ email +"\nA mail has been sent with your login " +
                                                         "credentials ",Toast.LENGTH_LONG).show();
-                                                Intent i=new Intent(MainActivity.this,StudentdashboardActivity.class);
+                                                Intent i=new Intent(Main2Activity.this,StudentdashboardActivity.class);
                                                 startActivity(i);
 
                                             }
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                             Log.e("Error",task.getException().toString());
-                            Toast.makeText(MainActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(Main2Activity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                             //   Intent i=new Intent(RegisterActivity.this,RegisterActivity.class);
                             //   startActivity(i);
                             //   Toast.makeText(getApplicationContext(),"Username already in Use", Toast.LENGTH_LONG).show();
@@ -183,9 +183,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnLogin_click(View v){
-        Intent i=new Intent(MainActivity.this,LoginActivity.class);
+        Intent i=new Intent(Main2Activity.this,LoginActivity.class);
         startActivity(i);
     }
 
 }
-

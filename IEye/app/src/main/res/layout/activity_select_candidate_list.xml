@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".SelectCandidateList">
+
+
+    <Button
+        android:id="@+id/admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/WhiteBlue"
+        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="153dp"
+        android:onClick="Admin_click"
+        android:text="Admin" />
+
+    <Button
+        android:id="@+id/volunteer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WhiteBlue"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="170dp"
+        android:onClick="volunteer_click"
+        android:layout_centerInParent="true"
+        android:text="Volunteer" />
+
+    <Button
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp"
+        android:background="@color/WhiteBlue"
+        android:onClick="user_click"
+        android:text="Student"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

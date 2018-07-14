@@ -10,11 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".StudentdashboardActivity" />
@@ -27,7 +29,17 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ClassSelection" />
         <activity android:name=".BookSelection" />
-        <activity android:name=".MathBooks"></activity>
+        <activity android:name=".MathBooks" />
+        <activity android:name=".SelectCandidateList">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".VolunteerLogin" />
+        <activity android:name=".Volunteer_profile"></activity>
     </application>
 
 </manifest>
