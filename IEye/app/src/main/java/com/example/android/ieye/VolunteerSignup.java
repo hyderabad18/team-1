@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -98,14 +97,14 @@ public class VolunteerSignup extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            Intent i=new Intent(VolunteerSignup.this,StudentdashboardActivity.class);
+                            Intent i=new Intent(VolunteerSignup.this,VolunteerdashboardActivity.class);
                             startActivity(i);
                             finish();
-                            Toast.makeText(MainActivity.this,"Welcome..",Toast.LENGTH_LONG).show();
+                            Toast.makeText(VolunteerSignup.this,"Welcome..",Toast.LENGTH_LONG).show();
 
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(MainActivity.this,"Error..",Toast.LENGTH_LONG).show();
+                            Toast.makeText(VolunteerSignup.this,"Error..",Toast.LENGTH_LONG).show();
                         }
 
                         // ...
@@ -128,7 +127,7 @@ public class VolunteerSignup extends AppCompatActivity {
         final String email=txtEmail.getText().toString();
         final String password=txtPassword.getText().toString();
 
-        final ProgressDialog progressDialog = ProgressDialog.show(MainActivity.this,"Please wait...","Processing" ,true);
+        final ProgressDialog progressDialog = ProgressDialog.show(VolunteerSignup.this,"Please wait...","Processing" ,true);
         (firebaseAuth.createUserWithEmailAndPassword(txtEmail.getText().toString(),txtPassword.getText().toString()))
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -143,7 +142,7 @@ public class VolunteerSignup extends AppCompatActivity {
                                     "  ","  ","  ","  "
                                     ,"  ","  ","  ","  ","  ","  ","  ","  ");
 
-                            rootReference.child("Student").child(firebaseUser.getUid()).setValue(user)
+                            rootReference.child("Volunteer").child(firebaseUser.getUid()).setValue(user)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
@@ -155,13 +154,13 @@ public class VolunteerSignup extends AppCompatActivity {
 
                                             if(task.isSuccessful())
                                             {
-                                                SendMail sm = new SendMail(MainActivity.this, email, subject, message);
+                                                SendMail sm = new SendMail(VolunteerSignup.this, email, subject, message);
                                                 sm.execute();
 
                                                 //  Toast.makeText(MainActivity.this,"Welcome " +email,Toast.LENGTH_LONG).show();
-                                                Toast.makeText(MainActivity.this,"Welcome "+ email +"\nA mail has been sent with your login " +
+                                                Toast.makeText(VolunteerSignup.this,"Welcome "+ email +"\nA mail has been sent with your login " +
                                                         "credentials ",Toast.LENGTH_LONG).show();
-                                                Intent i=new Intent(MainActivity.this,StudentdashboardActivity.class);
+                                                Intent i=new Intent(VolunteerSignup.this,VolunteerdashboardActivity.class);
                                                 startActivity(i);
 
                                             }
@@ -173,7 +172,7 @@ public class VolunteerSignup extends AppCompatActivity {
 
 
                             Log.e("Error",task.getException().toString());
-                            Toast.makeText(MainActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(VolunteerSignup.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                             //   Intent i=new Intent(RegisterActivity.this,RegisterActivity.class);
                             //   startActivity(i);
                             //   Toast.makeText(getApplicationContext(),"Username already in Use", Toast.LENGTH_LONG).show();
@@ -184,7 +183,7 @@ public class VolunteerSignup extends AppCompatActivity {
     }
 
     public void btnLogin_click(View v){
-        Intent i=new Intent(MainActivity.this,Stud_profile.class);
+        Intent i=new Intent(VolunteerSignup.this,Stud_profile.class);
         startActivity(i);
     }
 
