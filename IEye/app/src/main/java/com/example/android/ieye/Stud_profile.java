@@ -97,18 +97,21 @@ public class Stud_profile extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-
-            // Handle the camera action
-        }
-         if(id == R.id.nav_search) {}
          if (id == R.id.nav_gallery) {
 
             Intent i=new Intent(Stud_profile.this,ProfileActivity.class);
             startActivity(i);
         }
+
+        if (id == R.id.nav_camera) {
+
+            // Handle the camera action
+        }
+        if(id == R.id.nav_search) {}
         if (id == R.id.nav_slideshow) {
 
+            Intent i=new Intent(Stud_profile.this,MainActivity.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
