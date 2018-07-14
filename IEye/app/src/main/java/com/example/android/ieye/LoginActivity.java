@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(LoginActivity.this,"Welcome...",Toast.LENGTH_LONG).show();
-                            Intent i=new Intent(LoginActivity.this,StudentdashboardActivity.class);
+                            Intent i=new Intent(LoginActivity.this,Stud_profile.class);
                             i.putExtra("Name",firebaseAuth.getCurrentUser().getEmail());
                             startActivity(i);
                         }

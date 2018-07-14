@@ -1,5 +1,6 @@
 package com.example.android.ieye;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,14 +13,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class Stud_profile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stud_profile);
+//        button=(Button)findViewById(R.id.button4);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i=new Intent(Stud_profile.this,Stud_profile.class);
+//                startActivity(i);
+//            }
+//        });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -52,10 +63,13 @@ public class Stud_profile extends AppCompatActivity
         }
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.stud_profile, menu);
+        getMenuInflater().inflate(R.menu.menu,menu);
         return true;
     }
 
@@ -65,11 +79,14 @@ public class Stud_profile extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        int id1=item.getItemId();
+        if(id1==R.id.edit_profile_id)
+        {
+            Intent i=new Intent(Stud_profile.this,InsertUserData.class);
+            startActivity(i);
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

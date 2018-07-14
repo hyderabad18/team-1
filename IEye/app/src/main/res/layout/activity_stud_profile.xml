@@ -22,4 +22,5 @@
         app:headerLayout="@layout/nav_header_stud_profile"
         app:menu="@menu/activity_stud_profile_drawer" />
 
+
 </android.support.v4.widget.DrawerLayout>
