@@ -103,7 +103,9 @@ public class Stud_profile extends AppCompatActivity
             startActivity(i);
         }
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_books) {
+             Intent i=new Intent(Stud_profile.this,ClassSelection.class);
+             startActivity(i);
 
             // Handle the camera action
         }

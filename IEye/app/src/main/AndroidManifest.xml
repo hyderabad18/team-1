@@ -24,7 +24,8 @@
             android:label="@string/title_activity_stud_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".InsertUserData" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ClassSelection"></activity>
     </application>
 
 </manifest>
