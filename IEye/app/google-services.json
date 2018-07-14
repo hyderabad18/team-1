@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "555213568379",
+    "firebase_url": "https://ieye-1b22e.firebaseio.com",
+    "project_id": "ieye-1b22e",
+    "storage_bucket": "ieye-1b22e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555213568379:android:6c5723a839fe7348",
+        "android_client_info": {
+          "package_name": "com.example.android.ieye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555213568379-rgamisj2auvdln0c1t5pruu32p5e9dgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8BssPPkGztIYDZ3quQOXx_Kx0Y5I8K5s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
