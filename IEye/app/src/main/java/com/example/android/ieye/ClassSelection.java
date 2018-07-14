@@ -65,10 +65,11 @@ public class ClassSelection extends AppCompatActivity {
             });
             if(numpannel==10)
             {
-
-                Intent i1=new Intent(ClassSelection.this,ClassSelection.class);
-                i1.putExtra("class",numpannel);
+                Intent i1=new Intent(ClassSelection.this,BookSelection.class);
                 startActivity(i1);
+
+                Intent i2=new Intent(ClassSelection.this,MathBooks.class);
+                i2.putExtra("Class",numpannel);
               //  rootReference.child("10").child("Books");
             }
             if(numpannel==11)

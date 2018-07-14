@@ -25,7 +25,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".InsertUserData" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".ClassSelection"></activity>
+        <activity android:name=".ClassSelection" />
+        <activity android:name=".BookSelection" />
+        <activity android:name=".MathBooks"></activity>
     </application>
 
 </manifest>
