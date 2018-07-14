@@ -85,12 +85,12 @@ public class InsertUserData extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot)
             {
                 getValues();
-                reference.child(user.getUid()).setValue(editUser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reference.child("Student".toString()).child(user.getUid()).setValue(editUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 
                         Toast.makeText(getApplicationContext(),"Edited Successfully...",Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(InsertUserData.this,StudentdashboardActivity.class);
+                        Intent i=new Intent(InsertUserData.this,Stud_profile.class);
                         startActivity(i);
                     }
                 });

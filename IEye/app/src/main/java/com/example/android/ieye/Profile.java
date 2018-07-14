@@ -1,33 +1,36 @@
 package com.example.android.ieye;
 
-public class Student {
-    public String email,password;
-    public String first_name;
-    public String last_name;
-    public String month;
-    public String year;
-    public String day;
-    public String mobile;
-    public String work;
-    public String add_lane_1;
-    public String add_lane_2;
-    public String country;
-    public String state;
-    public String pin_code;
+public class Profile
+{
+    private int id;
+    private String first_name;
+    private String last_name;
+    private String month;
+    private String year;
+    private String day;
 
+    private String email;
+    private String phone_no;
+    private String work_no;
 
-    public Student(String email, String password, String first_name, String last_name, String month, String year, String day,
-                String mobile, String work, String add_lane_1, String add_lane_2, String country, String state, String pin_code)
-    {
-        this.email = email;
-        this.password = password;
+    private String add_lane_1;
+    private String add_lane_2;
+    private String country;
+    private String state;
+    private String pin_code;
+
+    public Profile(int id, String first_name, String last_name, String month, String year, String day,
+                   String email, String phone_no, String work_no,
+                   String add_lane_1, String add_lane_2, String country, String state, String pin_code) {
+        this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.month = month;
         this.year = year;
         this.day = day;
-        this.mobile = mobile;
-        this.work = work;
+        this.email = email;
+        this.phone_no = phone_no;
+        this.work_no = work_no;
         this.add_lane_1 = add_lane_1;
         this.add_lane_2 = add_lane_2;
         this.country = country;
@@ -35,25 +38,12 @@ public class Student {
         this.pin_code = pin_code;
     }
 
-    public Student()
-    {
-
+    public int getId() {
+        return id;
     }
 
-    public String getUsername() {
-        return email;
-    }
-
-    public void setUsername(String username) {
-        this.email = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirst_name() {
@@ -96,20 +86,28 @@ public class Student {
         this.day = day;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getWork() {
-        return work;
+    public String getPhone_no() {
+        return phone_no;
     }
 
-    public void setWork(String work) {
-        this.work = work;
+    public void setPhone_no(String phone_no) {
+        this.phone_no = phone_no;
+    }
+
+    public String getWork_no() {
+        return work_no;
+    }
+
+    public void setWork_no(String work_no) {
+        this.work_no = work_no;
     }
 
     public String getAdd_lane_1() {
@@ -152,3 +150,4 @@ public class Student {
         this.pin_code = pin_code;
     }
 }
+

@@ -98,12 +98,16 @@ public class Stud_profile extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
+
             // Handle the camera action
         }
-        else if (id == R.id.nav_search) {}
-         else if (id == R.id.nav_gallery) {
+         if(id == R.id.nav_search) {}
+         if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+            Intent i=new Intent(Stud_profile.this,ProfileActivity.class);
+            startActivity(i);
+        }
+        if (id == R.id.nav_slideshow) {
 
         }
 
