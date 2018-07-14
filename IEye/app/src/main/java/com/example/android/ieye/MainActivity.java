@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnLogin_click(View v){
-        Intent i=new Intent(MainActivity.this,LoginActivity.class);
+        Intent i=new Intent(MainActivity.this,Stud_profile.class);
         startActivity(i);
     }
 
