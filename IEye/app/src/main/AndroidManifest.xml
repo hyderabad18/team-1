@@ -22,7 +22,8 @@
         <activity
             android:name=".Stud_profile"
             android:label="@string/title_activity_stud_profile"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".VolunteerSignup"></activity>
     </application>
 
 </manifest>

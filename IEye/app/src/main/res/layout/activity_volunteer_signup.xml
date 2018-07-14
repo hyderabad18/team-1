@@ -1,0 +1,85 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorWhite"
+tools:context=".VolunteerSignup">
+
+
+
+<EditText
+    android:id="@+id/txtEmailRegister"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:hint="Email Id"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="94dp"
+    android:ems="10"
+    android:inputType="textEmailAddress" />
+
+<EditText
+    android:id="@+id/txtPasswordRegister"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Password"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="165dp"
+    android:ems="10"
+    android:inputType="textPassword" />
+
+<Button
+    android:id="@+id/button2"
+    android:layout_width="170dp"
+    android:layout_height="30dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="235dp"
+    android:onClick="btnRegister_click"
+    android:text="SignUp"
+    android:background="@color/WhiteBlue"
+    android:textColor="@color/colorWhite"/>
+
+
+<View
+    android:layout_marginTop="290dp"
+    android:layout_marginLeft="120dp"
+    android:layout_marginRight="120dp"
+    android:layout_width="match_parent"
+    android:layout_height="0.7dp"
+    android:background="@color/black"/>
+
+
+<com.google.android.gms.common.SignInButton
+    android:id="@+id/googleSignInButton"
+    android:layout_width="170dp"
+    android:layout_height="30dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="165dp"
+    android:visibility="visible" />
+
+<Button
+    android:id="@+id/button3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:onClick="btnLogin_click"
+    android:layout_centerHorizontal="true"
+    android:backgroundTint="@color/lightBlue"
+    android:text="Already Have An Account?" />
+
+<TextView
+    android:id="@+id/textView6"
+    android:background="@color/colorWhite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="282dp"
+    android:text="OR" />
+</RelativeLayout>
