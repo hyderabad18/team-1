@@ -13,7 +13,7 @@ public class LoginRedirectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_redirect);
     }
 
-    public void studentclick(View v)
+    public void studentclick(View v)    
     {
         Intent iStudent = new Intent(LoginRedirectActivity.this,MainActivity.class);
         startActivity(iStudent);
