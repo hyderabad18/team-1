@@ -52,4 +52,9 @@ public class BookSelection extends AppCompatActivity {
     {
 
     }
+    public void btnResponse(View view)
+    {
+        Intent i=new Intent(BookSelection.this,MailTo.class);
+        startActivity(i);
+    }
 }

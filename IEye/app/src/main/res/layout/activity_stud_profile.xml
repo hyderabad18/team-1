@@ -22,13 +22,5 @@
         app:headerLayout="@layout/nav_header_stud_profile"
         app:menu="@menu/activity_stud_profile_drawer" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Upload Notes"
-        android:background="@color/lightBlue"
-        android:textColor="@color/colorWhite"
-        android:onClick="file_upload"/>
 
 </android.support.v4.widget.DrawerLayout>
