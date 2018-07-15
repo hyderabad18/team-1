@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/text"
+        android:layout_height="wrap_content"
+        android:text="I &amp; EYE"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="123dp"
+        android:text="I&amp;Eye’ s mission is to provide quality education and health including rectification of vision for visually impaired children with the goal to provide a community based learning mechanism to improve their education percentages. They aim to support and nurture visually impaired children into healthy and independent individuals."
+        android:textColor="@color/black" />
+
+    <Button
+
+        android:layout_width="236dp"
+        android:id="@+id/gohome"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="165dp"
+        android:onClick="btn_Select"
+        android:background="@color/lightBlue"
+        android:text="Go"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

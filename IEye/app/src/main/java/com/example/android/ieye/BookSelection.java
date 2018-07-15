@@ -33,9 +33,12 @@ public class BookSelection extends AppCompatActivity {
         physics=(Button)findViewById(R.id.physics);
         chem=(Button)findViewById(R.id.chemistry);
     }
+
     public void btn_math(View view)
     {
+        String classe="10";
         Intent i1=new Intent(BookSelection.this,MathBooks.class);
+        i1.putExtra("class",classe);
         startActivity(i1);
     }
 
