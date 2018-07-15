@@ -79,12 +79,13 @@ public class Stud_profile extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         int id1=item.getItemId();
-        if(id1==R.id.edit_profile_id)
+        if(id==R.id.edit_profile_id)
         {
             Intent i=new Intent(Stud_profile.this,InsertUserData.class);
             startActivity(i);
             return true;
         }
+       
 
 
         return super.onOptionsItemSelected(item);

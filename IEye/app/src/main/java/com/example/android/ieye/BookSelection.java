@@ -23,12 +23,15 @@ public class BookSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_selection);
 
+
         firebaseAuth=firebaseAuth.getInstance();
         classes=(TextView)findViewById(R.id.classes);
         classes.setText(getIntent().getExtras().getString("class"));
         String classes = getIntent().getStringExtra("class");
         Intent inten=new Intent();
         rootReference= FirebaseDatabase.getInstance().getReference().child("Class");
+
+
         math=(Button)findViewById(R.id.math);
         physics=(Button)findViewById(R.id.physics);
         chem=(Button)findViewById(R.id.chemistry);
@@ -36,9 +39,9 @@ public class BookSelection extends AppCompatActivity {
 
     public void btn_math(View view)
     {
-        String classe="10";
+       // String classe="10";
         Intent i1=new Intent(BookSelection.this,MathBooks.class);
-        i1.putExtra("class",classe);
+       // i1.putExtra("class",classe);
         startActivity(i1);
     }
 

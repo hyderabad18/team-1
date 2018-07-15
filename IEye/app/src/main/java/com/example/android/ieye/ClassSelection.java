@@ -42,4 +42,18 @@ public class ClassSelection extends AppCompatActivity {
         startActivity(i);
     }
 
+
+    public void btn_class11(View view)
+    {
+        Intent i=new Intent(ClassSelection.this,BookSelection.class);
+        startActivity(i);
+    }
+
+
+    public void btn_class12(View view)
+    {
+        Intent i=new Intent(ClassSelection.this,BookSelection.class);
+        startActivity(i);
+    }
+
 }
