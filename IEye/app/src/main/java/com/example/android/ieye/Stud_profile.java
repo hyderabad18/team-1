@@ -119,4 +119,9 @@ public class Stud_profile extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    public void file_upload(View view)
+    {
+        Intent i=new Intent(Stud_profile.this,FileUpload.class);
+        startActivity(i);
+    }
 }
